@@ -1,0 +1,98 @@
+18/10/27 17:53:58 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+18/10/27 17:53:58 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+18/10/27 17:53:58 WARN mapreduce.JobResourceUploader: Hadoop command-line option parsing not performed. Implement the Tool interface and execute your application with ToolRunner to remedy this.
+18/10/27 17:53:58 INFO input.FileInputFormat: Total input files to process : 1
+18/10/27 17:53:58 INFO mapreduce.JobSubmitter: number of splits:1
+18/10/27 17:53:59 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local1147307008_0001
+18/10/27 17:53:59 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+18/10/27 17:53:59 INFO mapreduce.Job: Running job: job_local1147307008_0001
+18/10/27 17:53:59 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+18/10/27 17:53:59 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+18/10/27 17:53:59 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+18/10/27 17:53:59 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+18/10/27 17:54:00 INFO mapred.LocalJobRunner: Waiting for map tasks
+18/10/27 17:54:00 INFO mapred.LocalJobRunner: Starting task: attempt_local1147307008_0001_m_000000_0
+18/10/27 17:54:00 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 1
+18/10/27 17:54:00 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+18/10/27 17:54:00 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+18/10/27 17:54:00 INFO mapred.MapTask: Processing split: file:/home/cse6242/Desktop/Q1/cse6242/graph1.tsv:0+4265759
+18/10/27 17:54:00 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+18/10/27 17:54:00 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+18/10/27 17:54:00 INFO mapred.MapTask: soft limit at 83886080
+18/10/27 17:54:00 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+18/10/27 17:54:00 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+18/10/27 17:54:00 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+18/10/27 17:54:00 INFO mapreduce.Job: Job job_local1147307008_0001 running in uber mode : false
+18/10/27 17:54:00 INFO mapreduce.Job:  map 0% reduce 0%
+18/10/27 17:54:02 INFO mapred.LocalJobRunner: 
+18/10/27 17:54:02 INFO mapred.MapTask: Starting flush of map output
+18/10/27 17:54:02 INFO mapred.MapTask: Spilling map output
+18/10/27 17:54:02 INFO mapred.MapTask: bufstart = 0; bufend = 2812764; bufvoid = 104857600
+18/10/27 17:54:02 INFO mapred.MapTask: kvstart = 26214396(104857584); kvend = 24934400(99737600); length = 1279997/6553600
+18/10/27 17:54:04 INFO mapred.MapTask: Starting flush of map output
+18/10/27 17:54:04 INFO mapred.MapTask: (RESET) equator 0 kv 26214396(104857584) kvi 24934396(99737584)
+18/10/27 17:54:04 INFO mapred.MapTask: Spilling map output
+18/10/27 17:54:04 INFO mapred.MapTask: bufstart = 0; bufend = 2812764; bufvoid = 104857600
+18/10/27 17:54:04 INFO mapred.MapTask: kvstart = 26214396(104857584); kvend = 24934400(99737600); length = 1279997/6553600
+18/10/27 17:54:04 INFO mapred.MapTask: Ignoring exception during close for org.apache.hadoop.mapred.MapTask$NewOutputCollector@3174610a
+java.lang.RuntimeException: java.lang.NoSuchMethodException: edu.gatech.cse6242.Q1$MyMaxFinder.<init>()
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:135)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Task.java:1753)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1647)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1498)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:729)
+	at org.apache.hadoop.mapred.MapTask.closeQuietly(MapTask.java:2061)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:803)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:270)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoSuchMethodException: edu.gatech.cse6242.Q1$MyMaxFinder.<init>()
+	at java.lang.Class.getConstructor0(Class.java:3082)
+	at java.lang.Class.getDeclaredConstructor(Class.java:2178)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:129)
+	... 13 more
+18/10/27 17:54:04 INFO mapred.LocalJobRunner: map task executor complete.
+18/10/27 17:54:04 WARN mapred.LocalJobRunner: job_local1147307008_0001
+java.lang.Exception: java.lang.RuntimeException: java.lang.NoSuchMethodException: edu.gatech.cse6242.Q1$MyMaxFinder.<init>()
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:491)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:551)
+Caused by: java.lang.RuntimeException: java.lang.NoSuchMethodException: edu.gatech.cse6242.Q1$MyMaxFinder.<init>()
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:135)
+	at org.apache.hadoop.mapred.Task$NewCombinerRunner.combine(Task.java:1753)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.sortAndSpill(MapTask.java:1647)
+	at org.apache.hadoop.mapred.MapTask$MapOutputBuffer.flush(MapTask.java:1498)
+	at org.apache.hadoop.mapred.MapTask$NewOutputCollector.close(MapTask.java:729)
+	at org.apache.hadoop.mapred.MapTask.runNewMapper(MapTask.java:799)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:341)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:270)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NoSuchMethodException: edu.gatech.cse6242.Q1$MyMaxFinder.<init>()
+	at java.lang.Class.getConstructor0(Class.java:3082)
+	at java.lang.Class.getDeclaredConstructor(Class.java:2178)
+	at org.apache.hadoop.util.ReflectionUtils.newInstance(ReflectionUtils.java:129)
+	... 12 more
+18/10/27 17:54:04 INFO mapreduce.Job: Job job_local1147307008_0001 failed with state FAILED due to: NA
+18/10/27 17:54:04 INFO mapreduce.Job: Counters: 11
+	Map-Reduce Framework
+		Map input records=320000
+		Map output records=320000
+		Map output bytes=2812764
+		Map output materialized bytes=0
+		Input split bytes=113
+		Combine input records=0
+		Combine output records=0
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+	File Input Format Counters 
+		Bytes Read=4299099
+18/10/27 17:54:10 INFO Configuration.deprecation: io.bytes.per.checksum is deprecated. Instead, use dfs.bytes-per-checksum
+Deleted cse6242/q1output1
